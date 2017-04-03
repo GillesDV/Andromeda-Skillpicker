@@ -1,0 +1,10 @@
+Use React-Router for the Detail view
+^
+
+redux = data bijhouden. Optioneel.
+
+Add little avatars?
+
+
+
+change favicon to Andromeda or N7 logo
