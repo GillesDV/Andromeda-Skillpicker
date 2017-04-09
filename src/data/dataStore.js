@@ -1,3 +1,4 @@
+let dataStore = {
   classList: {
     Adept: {
       HumanMaleAdept: {
@@ -173,3 +174,4 @@
   }
 }
 
+export {dataStore};
