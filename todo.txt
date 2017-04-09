@@ -4,3 +4,8 @@ Use React-Router for the Detail view
 redux = data bijhouden. Optioneel.
 
 Add little avatars?
+
+
+
+Later/secondary:
+Bonus stat for characters, either with text or symbols (+ text on hover)

@@ -10,119 +10,171 @@ export default class App extends Component {
         Adept: {
           HumanMaleAdept: {
             Name: "Human Male Adept",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanFemaleAdept: {
             Name: "Human Female Adept",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           AsariAdept: {
             Name: "Asari Adept",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "475",
+            Shields: "250"
           }
         },
         Engineer: {
           HumanMaleEngineer: {
             Name: "Human Male Engineer",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanFemaleEngineer: {
             Name: "Human Female Engineer",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           KroganEngineer: {
             Name: "Krogan Engineer",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "600",
+            Shields: "250"
           }
         },
         Infiltrator: {
           HumanMaleInfiltrator: {
             Name: "Human Male Infiltrator",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanMaleInfiltrator: {
             Name: "Human Male Infiltrator",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           SalarianInfiltrator: {
             Name: "Salarian Infiltrator",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "425",
+            Shields: "270"
           }
         },
         Soldier: {
           HumanMaleSoldier: {
             Name: "Human Male Soldier",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanFemaleSoldier: {
             Name: "Human Female Soldier",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           TurianSoldier: {
             Name: "Turian Soldier",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "500",
+            Shields: "275"
           }
         },
         Sentinel: {
           HumanMaleSentinel: {
             Name: "Human Male Sentinel",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanFemaleSentinel: {
             Name: "Human Female Sentinel",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           AsariSentinel: {
             Name: "Asari Sentinel",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "475",
+            Shields: "250"
           }
         },
         Vanguard: {
           HumanMaleVanguard: {
             Name: "Human Male Vanguard",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           HumanFemaleVanguard: {
             Name: "Human Female Vanguard",
-            Rarity: "Common"
+            Rarity: "Common",
+            Health: "500",
+            Shields: "250"
           },
           KroganVanguard: {
             Name: "Krogan Vanguard",
-            Rarity: "Uncommon"
+            Rarity: "Uncommon",
+            Health: "600",
+            Shields: "180"
           }
         },
         Others: {
           KroganMercenary: {
             Name: "Krogan Mercenary",
-            Rarity: "Rare"
+            Rarity: "Rare",
+            Health: "700",
+            Shields: "250"
           },
           TurianHavocTrooper: {
             Name: "Turian Havoc Trooper",
-            Rarity: "Rare"
+            Rarity: "Rare",
+            Health: "500",
+            Shields: "350"
           },
           AsariHuntress: {
             Name: "Asari Huntress",
-            Rarity: "Rare"
+            Rarity: "Rare",
+            Health: "475",
+            Shields: "250"
           },
           AngaraInsurgent: {
             Name: "Angara Insurgent",
-            Rarity: "Rare"
+            Rarity: "Rare",
+            Health: "550",
+            Shields: "250"
           },
           AsariDuelist: {
             Name: "Asari Duelist",
-            Rarity: "Ultra-Rare"
+            Rarity: "Ultra-Rare",
+            Health: "475",
+            Shields: "250"
           },
           AngaraDuelist: {
             Name: "Angara Duelist",
-            Rarity: "Ultra-Rare"
+            Rarity: "Ultra-Rare",
+            Health: "500",
+            Shields: "300"
           },
           SalarianOperator: {
             Name: "Salarian Operator",
-            Rarity: "Ultra-Rare"
+            Rarity: "Ultra-Rare",
+            Health: "425",
+            Shields: "270"
           },
           HumanKineticist: {
             Name: "Human Kineticist",
-            Rarity: "Ultra-Rare"
+            Rarity: "Ultra-Rare",
+            Health: "450",
+            Shields: "250"
           }
         }
 
