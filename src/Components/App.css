@@ -1,5 +1,6 @@
 .App {
   text-align: left;
+  width: 18em;
 }
 
 .App-logo {
@@ -27,4 +28,15 @@
 
 .vert-align{
   vertical-align: middle;
+}
+
+.typeCharacter{
+  background-color: #97C5CF;
+  /*color: white;*/
+
+}
+
+.typeCharacterLighterColor{
+  background: #2FB9F7;
+  /*color: white;*/
 }

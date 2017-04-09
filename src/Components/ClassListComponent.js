@@ -7,7 +7,7 @@ export default class ClassListComponent extends Component {
     var types = [];
 
     for(var selectedType in this.props.classList){
-      types.push(<p key={selectedType}> {selectedType} </p>);
+      types.push(<p className="typeCharacterLighterColor" key={selectedType}> {selectedType} </p>);
       for(var person in this.props.classList[selectedType]){
         types.push( <ListItem completeClass={this.props.classList[selectedType][person].Name}
                               key={this.props.classList[selectedType][person].Name}/> );
