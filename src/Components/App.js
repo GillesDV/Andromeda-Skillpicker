@@ -54,8 +54,8 @@ export default class App extends Component {
             Health: "500",
             Shields: "250"
           },
-          HumanMaleInfiltrator: {
-            Name: "Human Male Infiltrator",
+          HumanFemaleInfiltrator: {
+            Name: "Human Female Infiltrator",
             Rarity: "Common",
             Health: "500",
             Shields: "250"
