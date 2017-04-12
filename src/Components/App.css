@@ -1,6 +1,7 @@
 .App {
   text-align: left;
   width: 18em;
+  padding: 0.2em;
 }
 
 .App-logo {
@@ -38,5 +39,7 @@
 
 .typeCharacterLighterColor{
   background: #2FB9F7;
+  padding: 0.4em;
+  font-size: 14pt;
   /*color: white;*/
 }

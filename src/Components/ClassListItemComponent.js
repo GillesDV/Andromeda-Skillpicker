@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './../logo.svg';
+import logo from './../images/andromeda_initiative.png';
 
 export default class ClassListItemComponent extends Component {
   render() {
