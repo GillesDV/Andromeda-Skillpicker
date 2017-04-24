@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import ClassList from './ClassListComponent'
 import SkillTree from "./SkillTreeComponent"
 import {dataStore} from './../data/CharacterList'
-import overLoadSkillData from './../data/Skills/OverloadSkill'
+import overLoadData from './../data/Skills/Overload'
 
 
 export default class App extends Component {
   constructor(){
     super();
     this.state = dataStore;
-    this.firstSkill = new overLoadSkillData();
+    this.firstSkill = new overLoadData();
   }
   render() {
     //debugger;
