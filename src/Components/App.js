@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
 import ClassList from './ClassListComponent'
-import {dataStore} from './../data/dataStore.js'
-import {overloadSkillObject} from "./SkillTreeComponent"
+import SkillTree from "./SkillTreeComponent"
+import {dataStore} from './../data/dataStore'
+import overLoadSkillData from './../data/OverloadSkill'
+
 
 export default class App extends Component {
   constructor(){
     super();
     this.state = dataStore;
-    this.firstSkill = overloadSkillObject;
+    this.firstSkill = new overLoadSkillData();
   }
-  
   render() {
+    //debugger;
     return (
-      <div className="App">
-        <ClassList classList={this.state.classList} className="App" />
+      <div>
+        {/*<ClassList classList={this.state.classList} className="App" />*/}
+
+        <SkillTree skillData={this.firstSkill} />
       </div>
     );
   }
