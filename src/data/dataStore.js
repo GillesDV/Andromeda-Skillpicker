@@ -139,6 +139,12 @@ let dataStore = {
         Health: "475",
         Shields: "250"
       },
+      SalarianArchitect: {
+        Name: "Salarian Architect",
+        Rarity: "Rare",
+        Health: "429",
+        Shields: "270"
+      },
       AngaraInsurgent: {
         Name: "Angara Insurgent",
         Rarity: "Rare",
@@ -168,6 +174,12 @@ let dataStore = {
         Rarity: "Ultra-Rare",
         Health: "450",
         Shields: "250"
+      },
+      KroganGladiator: {
+        Name: "Krogan Gladiator",
+        Rarity: "Ultra-Rare",
+        Health: "700",
+        Shields: "300"
       }
     }
 
