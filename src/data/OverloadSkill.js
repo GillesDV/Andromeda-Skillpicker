@@ -26,8 +26,8 @@ export default class OverloadSkill{
   }
   OverloadStep3Unapply = function() {
     this.overloadSkillObject.InitialDamageUncharged = roundUp((this.overloadSkillObject.InitialDamageUncharged * 0.85), 2);
-    this.overloadSkillObject.InitialDamageCharged =  roundUp((this.overloadSkillObject.InitialDamageCharged * 0.85), 2);
-    this.overloadSkillObject.ChainDamage =  roundUp((this.overloadSkillObject.ChainDamage * 0.85), 2);
+    this.overloadSkillObject.InitialDamageCharged = roundUp((this.overloadSkillObject.InitialDamageCharged * 0.85), 2);
+    this.overloadSkillObject.ChainDamage = roundUp((this.overloadSkillObject.ChainDamage * 0.85), 2);
   }
 
   OverloadStep4aApply = function() {
@@ -37,15 +37,15 @@ export default class OverloadSkill{
   }
   OverloadStep4aUnapply = function() {
     this.overloadSkillObject.InitialDamageUncharged = roundUp((this.overloadSkillObject.InitialDamageUncharged * 0.75), 2);
-    this.overloadSkillObject.InitialDamageCharged =  roundUp((this.overloadSkillObject.InitialDamageCharged * 0.75), 2);
-    this.overloadSkillObject.ChainDamage =  roundUp((this.overloadSkillObject.ChainDamage * 0.75), 2);
+    this.overloadSkillObject.InitialDamageCharged = roundUp((this.overloadSkillObject.InitialDamageCharged * 0.75), 2);
+    this.overloadSkillObject.ChainDamage = roundUp((this.overloadSkillObject.ChainDamage * 0.75), 2);
   }
   OverloadStep4bApply = function() {
     this.overloadSkillObject.RechargeTimeInSeconds *= 0.8;
   }
 
   OverloadStep4bUnapply = function() {
-    this.overloadSkillObject.RechargeTimeInSeconds = Math.ceil(this.overloadSkillObject.RechargeTimeInSeconds * 1.2);
+    this.overloadSkillObject.RechargeTimeInSeconds = roundUp((this.overloadSkillObject.RechargeTimeInSeconds * 1.2), 2);
   }
   OverloadStep5aApply = function() {
     this.overloadSkillObject.AmountOfTargetsChainedWhenCharged += 1;
@@ -62,7 +62,6 @@ export default class OverloadSkill{
   OverloadStep5bUnapply = function() {
     this.overloadSkillObject.ShieldDamageBonusInPercent -= 50;
   }
-
 
   OverloadStep6aApply = function() {
     this.overloadSkillObject.AmountOfTargetsChainedWhenCharged += 1;
