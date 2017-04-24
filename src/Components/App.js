@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
 import './App.css';
+import React, { Component } from 'react';
 import ClassList from './ClassListComponent'
 import SkillTree from "./SkillTreeComponent"
-import {dataStore} from './../data/dataStore'
-import overLoadSkillData from './../data/OverloadSkill'
+import {dataStore} from './../data/CharacterList'
+import overLoadSkillData from './../data/Skills/OverloadSkill'
 
 
 export default class App extends Component {

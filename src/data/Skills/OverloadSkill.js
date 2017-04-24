@@ -1,4 +1,4 @@
-import {roundUp} from "./MathHelper"
+import {roundUp} from "./../MathHelper"
 
 export default class OverloadSkill{
   constructor(){
