@@ -3,14 +3,14 @@ Use React-Router for the Detail view
 
 redux = data bijhouden. Optioneel.
 
-Add little avatars?
-
+add weapon support
 
 
 TESTING
-  see if
 
 Later/secondary:
+Add little avatars?
+
 Bonus stat for characters, either with text or symbols (+ text on hover)
 
 Add primers/detonators to skills

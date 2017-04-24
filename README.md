@@ -3,7 +3,7 @@
 > npm start
 start the App
 
-The implementation of skills is made with the Visitor pattern
+Character skills are made with the Visitor pattern
 
 We use 2 spaces as indentation, because we are not savages.
 

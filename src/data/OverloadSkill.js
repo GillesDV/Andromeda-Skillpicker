@@ -1,141 +1,85 @@
 import {roundUp} from "./MathHelper"
 
-class OverloadSkill{
-
-  const overloadSkillObject = {
-    description: "Tap Button: Unleashes an electrostatic discharge upon a target. High damage to shields and synthetic enemies. Detonates combo primers. "
-                + "Hold Button: Charges Overload, causing it to \"chain\" to two additional targets."
+export default class OverloadSkill{
+  overloadSkillObject: {
+    description: 'Tap Button: Unleashes an electrostatic discharge upon a target. High damage to shields and synthetic enemies. Detonates combo primers. Hold Button: Charges Overload, causing it to \"chain\" to two additional targets.',
     InitialDamageUncharged: 150,
     InitialDamageCharged: 200,
     ChainDamage: 100,
-    AmountOfTargetsChainedWhenCharged: 2
+    AmountOfTargetsChainedWhenCharged: 2,
     ShieldDamageBonusInPercent: 200,
     SyntheticDamageBonusInPercent: 30,
-    RechargeTimeInSeconds: 15,
-
-    // Allow a change to be made to props
-    accept: function(visitor) {
-      visitor.visit(this);
-    }
-
-    //how to use:
-    // overloadSkill.accept(OverloadStep2Apply);
+    RechargeTimeInSeconds: 15
   }
 
-  var OverloadSkillReader = {
-    visit: function(skill){
-      return [
-        "Initial damage (uncharged): " + skill.InitialDamageUncharged,
-        "Initial damage (charged): " + skill.InitialDamageCharged,
-        "Chain damage: " + skill.ChainDamage,
-        "Amount of targets that can be chained: " + skill.AmountOfTargetsChainedWhenCharged,
-        "Shield damage bonus: " + skill.ShieldDamageBonusInPercent + "%",
-        "Synthetic damage bonus: " + skill.SyntheticDamageBonusInPercent + "%",
-        "Recharge time: " + skill.RechargeTimeInSeconds + " seconds"
-      ];
-    }
+  OverloadStep2Apply = function() {
+    this.overloadSkillObject.RechargeTimeInSeconds *= 0.9;
+  }
+  OverloadStep2Unapply = function() {
+    this.overloadSkillObject.RechargeTimeInSeconds = Math.ceil(this.overloadSkillObject.RechargeTimeInSeconds * 1.1);
   }
 
-  var OverloadStep2Apply = {
-    visit: function(skill) {
-      skill.RechargeTimeInSeconds *= 0.9;
-    }
+  OverloadStep3Apply = function() {
+    this.overloadSkillObject.InitialDamageUncharged *= 1.15;
+    this.overloadSkillObject.InitialDamageCharged *= 1.15;
+    this.overloadSkillObject.ChainDamage *= 1.15;
   }
-  var OverloadStep2Unapply = {
-    visit: function(skill) {
-      skill.RechargeTimeInSeconds = Math.ceil(skill.RechargeTimeInSeconds * 1.1);
-    }
-  }
-
-  var OverloadStep3Apply = {
-    visit: function(skill) {
-      skill.InitialDamageUncharged *= 1.15;
-      skill.InitialDamageCharged *= 1.15;
-      skill.ChainDamage *= 1.15;
-    }
-  }
-  var OverloadStep3Unapply = {
-    visit: function(skill) {
-      skill.InitialDamageUncharged = roundUp((skill.InitialDamageUncharged * 0.85), 2);
-      skill.InitialDamageCharged =  roundUp((skill.InitialDamageCharged * 0.85), 2);
-      skill.ChainDamage =  roundUp((skill.ChainDamage * 0.85), 2);
-    }
+  OverloadStep3Unapply = function() {
+    this.overloadSkillObject.InitialDamageUncharged = roundUp((this.overloadSkillObject.InitialDamageUncharged * 0.85), 2);
+    this.overloadSkillObject.InitialDamageCharged =  roundUp((this.overloadSkillObject.InitialDamageCharged * 0.85), 2);
+    this.overloadSkillObject.ChainDamage =  roundUp((this.overloadSkillObject.ChainDamage * 0.85), 2);
   }
 
-  var OverloadStep4aApply = {
-    visit: function(skill) {
-      skill.InitialDamageUncharged *= 1.25;
-      skill.InitialDamageCharged *= 1.25;
-      skill.ChainDamage *= 1.25;
-    }
+  OverloadStep4aApply = function() {
+    this.overloadSkillObject.InitialDamageUncharged *= 1.25;
+    this.overloadSkillObject.InitialDamageCharged *= 1.25;
+    this.overloadSkillObject.ChainDamage *= 1.25;
   }
-  var OverloadStep4aUnapply = {
-    visit: function(skill) {
-      skill.InitialDamageUncharged = roundUp((skill.InitialDamageUncharged * 0.75), 2);
-      skill.InitialDamageCharged =  roundUp((skill.InitialDamageCharged * 0.75), 2);
-      skill.ChainDamage =  roundUp((skill.ChainDamage * 0.75), 2);
-    }
+  OverloadStep4aUnapply = function() {
+    this.overloadSkillObject.InitialDamageUncharged = roundUp((this.overloadSkillObject.InitialDamageUncharged * 0.75), 2);
+    this.overloadSkillObject.InitialDamageCharged =  roundUp((this.overloadSkillObject.InitialDamageCharged * 0.75), 2);
+    this.overloadSkillObject.ChainDamage =  roundUp((this.overloadSkillObject.ChainDamage * 0.75), 2);
   }
-  var OverloadStep4bApply = {
-    visit: function(skill) {
-      skill.RechargeTimeInSeconds *= 0.8;
-    }
+  OverloadStep4bApply = function() {
+    this.overloadSkillObject.RechargeTimeInSeconds *= 0.8;
   }
 
-  var OverloadStep4bUnapply = {
-    visit: function(skill) {
-      skill.RechargeTimeInSeconds = Math.ceil(skill.RechargeTimeInSeconds * 1.2);
-    }
+  OverloadStep4bUnapply = function() {
+    this.overloadSkillObject.RechargeTimeInSeconds = Math.ceil(this.overloadSkillObject.RechargeTimeInSeconds * 1.2);
   }
-  var OverloadStep5aApply = {
-    visit: function(skill) {
-      skill.AmountOfTargetsChainedWhenCharged += 1;
-    }
+  OverloadStep5aApply = function() {
+    this.overloadSkillObject.AmountOfTargetsChainedWhenCharged += 1;
   }
 
-  var OverloadStep5aUnapply = {
-    visit: function(skill) {
-      skill.AmountOfTargetsChainedWhenCharged -= 1;
-    }
+  OverloadStep5aUnapply = function() {
+    this.overloadSkillObject.AmountOfTargetsChainedWhenCharged -= 1;
   }
 
-  var OverloadStep5bApply = {
-    visit: function(skill) {
-      skill.ShieldDamageBonusInPercent += 50;
-    }
+  OverloadStep5bApply = function() {
+    this.overloadSkillObject.ShieldDamageBonusInPercent += 50;
   }
 
-  var OverloadStep5bUnapply = {
-    visit: function(skill) {
-      skill.ShieldDamageBonusInPercent -= 50;
-    }
+  OverloadStep5bUnapply = function() {
+    this.overloadSkillObject.ShieldDamageBonusInPercent -= 50;
   }
 
 
-  var OverloadStep6aApply = {
-    visit: function(skill) {
-      skill.AmountOfTargetsChainedWhenCharged += 1;
-      skill.ChainDamage *= 1.3;
-    }
+  OverloadStep6aApply = function() {
+    this.overloadSkillObject.AmountOfTargetsChainedWhenCharged += 1;
+    this.overloadSkillObject.ChainDamage *= 1.3;
   }
-  var OverloadStep6aUnapply = {
-    visit: function(skill) {
-      skill.AmountOfTargetsChainedWhenCharged -= 1;
-      skill.ChainDamage = roundUp((skill.ChainDamage * 0.7), 2);
-    }
+  OverloadStep6aUnapply = function() {
+    this.overloadSkillObject.AmountOfTargetsChainedWhenCharged -= 1;
+    this.overloadSkillObject.ChainDamage = roundUp((this.overloadSkillObject.ChainDamage * 0.7), 2);
   }
 
-  var OverloadStep6bApply = {
-    visit: function(skill) {
-      skill.ShieldDamageBonusInPercent += 50;
-      skill.SyntheticDamageBonusInPercent += 50;
-    }
+  OverloadStep6bApply = function() {
+    this.overloadSkillObject.ShieldDamageBonusInPercent += 50;
+    this.overloadSkillObject.SyntheticDamageBonusInPercent += 50;
   }
-  var OverloadStep6bUnapply = {
-    visit: function(skill) {
-      skill.ShieldDamageBonusInPercent -= 50;
-      skill.SyntheticDamageBonusInPercent -= 50;
-    }
+  OverloadStep6bUnapply = function() {
+    this.overloadSkillObject.ShieldDamageBonusInPercent -= 50;
+    this.overloadSkillObject.SyntheticDamageBonusInPercent -= 50;
   }
 
 }
