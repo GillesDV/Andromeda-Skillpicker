@@ -1,16 +1,30 @@
 Use React-Router for the Detail view
 ^
 
-redux = data bijhouden. Optioneel.
+redux = data bijhouden.
 
 add weapon support
 
 
-TESTING
-
-Later/secondary:
+Secondary:
 Add little avatars?
 
-Bonus stat for characters, either with text or symbols (+ text on hover)
+V1.0:
+Must be able to :
+- select a character
+- pick Skills
+- select weapon
+- see what changes those choices have on the total stats of that character
 
-Add primers/detonators to skills
+
+V1.2:
+- Bonus stat for characters, either with text or symbols (+ text on hover)
+- Add primers/detonators to skills
+-- maybe add an extra attribute per skill in the dataObject? isPrimer & isDetonator
+- Option to share builds via URL
+- Option to assign role to a build? Mook, hybrid, ...
+
+
+V1.Never
+- Option to rate builds
+-- Would require a back-end. More than just front-end. Outside scope.
