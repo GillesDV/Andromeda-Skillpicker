@@ -12,19 +12,19 @@ export default class SkillTreeComponent extends Component {
   render() {
     return (
       <div>
-        <a>{this.state.skillData.overloadSkillObject.InitialDamageUncharged} </a>
+        <a>{this.state.skillData.dataObject.InitialDamageUncharged} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.InitialDamageCharged} </a>
+        <a>{this.state.skillData.dataObject.InitialDamageCharged} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.ChainDamage} </a>
+        <a>{this.state.skillData.dataObject.ChainDamage} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.AmountOfTargetsChainedWhenCharged} </a>
+        <a>{this.state.skillData.dataObject.AmountOfTargetsChainedWhenCharged} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.ShieldDamageBonusInPercent} </a>
+        <a>{this.state.skillData.dataObject.ShieldDamageBonusInPercent} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.SyntheticDamageBonusInPercent} </a>
+        <a>{this.state.skillData.dataObject.SyntheticDamageBonusInPercent} </a>
          -
-        <a>{this.state.skillData.overloadSkillObject.RechargeTimeInSeconds} </a>
+        <a>{this.state.skillData.dataObject.RechargeTimeInSeconds} </a>
 
         <br/> <br/>
 
