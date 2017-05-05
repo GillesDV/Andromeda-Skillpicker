@@ -16,9 +16,20 @@ export default class App extends Component {
     //debugger;
     return (
       <div>
-        {/*<ClassList classList={this.state.classList} className="App" />*/}
+        <table>
+          <tr>
+            <td>
+              {/*<ClassList classList={this.state.classList} className="App" />*/}
+            </td>
+            <td>
+              <SkillTree skillData={this.firstSkill} />
+            </td>
+            <td>
 
-        <SkillTree skillData={this.firstSkill} />
+            </td>
+          </tr>
+        </table>
+
       </div>
     );
   }
