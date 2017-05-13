@@ -3,11 +3,11 @@ Use React-Router for the Detail view
 
 redux = data bijhouden.
 
-add weapon support
+
+3 parts in the mainpage -> 3 subfolders in Components folder
 
 
-Secondary:
-Add little avatars?
+
 
 V1.0:
 Must be able to :
@@ -18,11 +18,13 @@ Must be able to :
 
 
 V1.2:
+- Add decent avatars
 - Bonus stat for characters, either with text or symbols (+ text on hover)
 - Add primers/detonators to skills
 -- maybe add an extra attribute per skill in the dataObject? isPrimer & isDetonator
 - Option to share builds via URL
 - Option to assign role to a build? Mook, hybrid, ...
+
 
 
 V1.Never
