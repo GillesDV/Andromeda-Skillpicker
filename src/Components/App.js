@@ -1,4 +1,4 @@
-import './App.css';
+import './../css/App.css';
 import React, { Component } from 'react';
 import ClassList from './ClassListComponent'
 import SkillTree from "./SkillTreeComponent"

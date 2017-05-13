@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './../css/App.css';
 import ListItem from "./ClassListItemComponent"
 
 export default class ClassListComponent extends Component {
