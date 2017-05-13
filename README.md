@@ -23,3 +23,12 @@ We use 2 spaces as indentation, because we are not savages.
 
 - Code quality
 -- method / variable names
+
+
+Possible interesting libraries/npm packages:
+- semenatic-ui-react
+- react-router
+- react-router-redux
+
+- redux-form?
+- react-redux-form?
