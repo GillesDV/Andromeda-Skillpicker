@@ -25,7 +25,7 @@ export default class App extends Component {
                 <ClassListComponent classList={characterList} />
               </td>
               <td>
-                <ClassLevel />
+                <ClassLevelHeader />
                 <ClassSkillPoints amountOfSkillPoints={20}/>
                 <SkillTreeComponent skillData={this.firstSkill} />
               </td>
@@ -117,7 +117,7 @@ class OverloadStats extends Component {
   }
 }
 
-class ClassLevel extends Component{
+class ClassLevelHeader extends Component{
   render(){
     return (
       <div>
