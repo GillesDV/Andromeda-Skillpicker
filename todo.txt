@@ -6,7 +6,7 @@ redux = data bijhouden.
 
 3 parts in the mainpage -> 3 subfolders in Components folder
 
-
+possibly remove -Component suffix
 
 
 V1.0:
