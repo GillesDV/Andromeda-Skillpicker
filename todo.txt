@@ -24,7 +24,7 @@ V1.2:
 -- maybe add an extra attribute per skill in the dataObject? isPrimer & isDetonator
 - Option to share builds via URL
 - Option to assign role to a build? Mook, hybrid, ...
-
+- Select a level for weapons
 
 
 V1.Never

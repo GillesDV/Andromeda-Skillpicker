@@ -2,6 +2,9 @@ import './../css/App.css';
 import React, { Component } from 'react';
 import logo from './../images/andromeda_initiative.png';
 import initialState from './../data/state/initialState.js';
+import {setClassLevel} from '../actions/Actions';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
 var state = initialState;
 
@@ -94,6 +97,8 @@ class OverloadStats extends Component {
       <div>
         <h2>{this.props.skillData.dataObject.title} </h2>
 
+        <a>Description: {this.props.skillData.dataObject.description} </a>
+        <br/> <br />
         <a>Initial Damage (uncharged): {this.props.skillData.dataObject.InitialDamageUncharged} </a>
         <br/>
         <a> Initial Damage (charged): {this.props.skillData.dataObject.InitialDamageCharged} </a>
@@ -117,20 +122,80 @@ class ClassLevel extends Component{
     return (
       <div>
         Class Level:
-        <a> I - </a>
-        <a>II - </a>
-        <a>III - </a>
-        <a>IV - </a>
-        <a>V - </a>
-        <a>VI - </a>
-        <a>VII - </a>
-        <a>VIII - </a>
-        <a>IX - </a>
-        <a>X</a>
+        <ClassLevelContainer selectedLevel={1}>I</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={2}>II</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={3}>III</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={4}>IV</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={5}>V</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={6}>VI</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={7}>VII</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={8}>VIII</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={9}>IX</ClassLevelContainer>
+        {' - '}
+        <ClassLevelContainer selectedLevel={10}>X</ClassLevelContainer>
       </div>
     );
   }
 }
+
+
+{/* ClassLevelPresentational.js : */}
+
+const ClassLevelPresentational = ({ active, children, onClick }) => {
+  if (active) {
+    return <span>{children}</span>
+  }
+  return (
+    <a href="#"
+       onClick={e => {
+         e.preventDefault()
+         onClick()
+       }}
+    >
+      {children}
+    </a>
+  )
+}
+
+ClassLevelPresentational.propTypes = {
+  active: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired
+}
+
+
+{/* ClassLevelContainer.js : */}
+const mapStateToProps = (state, ownProps) => {
+  return {
+    active: ownProps.selectedLevel === state.selectedClassLevel
+  }
+}
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    onClick: () => {
+      dispatch(setClassLevel(ownProps.selectedLevel))
+    }
+  }
+}
+
+const ClassLevelContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ClassLevelPresentational)
+
+
+
+
+
+
 
 class ClassSkillPoints extends Component{
   render(){
@@ -147,7 +212,7 @@ class HealthAndShields extends Component{
     return (
       <h3>
         Health: {this.props.Health}
-        -
+        {' - '}
         Shields: {this.props.Shields}
       </h3>
     );
