@@ -2,9 +2,10 @@ import './../css/App.css';
 import React, { Component } from 'react';
 import logo from './../images/andromeda_initiative.png';
 import initialState from './../data/state/initialState.js';
-import {setClassLevel} from '../actions/Actions';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import ClassLevelHeader from './characterOptions/ClassLevelHeader';
+
 
 var state = initialState;
 
@@ -116,83 +117,6 @@ class OverloadStats extends Component {
     );
   }
 }
-
-class ClassLevelHeader extends Component{
-  render(){
-    return (
-      <div>
-        Class Level:
-        <ClassLevelContainer selectedLevel={1}>I</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={2}>II</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={3}>III</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={4}>IV</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={5}>V</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={6}>VI</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={7}>VII</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={8}>VIII</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={9}>IX</ClassLevelContainer>
-        {' - '}
-        <ClassLevelContainer selectedLevel={10}>X</ClassLevelContainer>
-      </div>
-    );
-  }
-}
-
-
-{/* ClassLevelPresentational.js : */}
-
-const ClassLevelPresentational = ({ active, children, onClick }) => {
-  if (active) {
-    return <span>{children}</span>
-  }
-  return (
-    <a href="#"
-       onClick={e => {
-         e.preventDefault()
-         onClick()
-       }}
-    >
-      {children}
-    </a>
-  )
-}
-
-ClassLevelPresentational.propTypes = {
-  active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
-}
-
-
-{/* ClassLevelContainer.js : */}
-const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.selectedLevel === state.selectedClassLevel
-  }
-}
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onClick: () => {
-      dispatch(setClassLevel(ownProps.selectedLevel))
-    }
-  }
-}
-
-const ClassLevelContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ClassLevelPresentational)
-
-
-
 
 
 
