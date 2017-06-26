@@ -3,11 +3,11 @@ import React, {Component} from 'react'
 import ClassLevelHeader from './characterOptions/ClassLevelHeader';
 import ClassSkillPoints from './characterOptions/ClassSkillPoints';
 
-const CharacterOptionsPresentational = ({firstSkill}) => {
+const CharacterOptionsPresentational = ({firstSkill, skillPoints}) => {
   return (
     <div>
       <ClassLevelHeader />
-      <ClassSkillPoints />
+      <ClassSkillPoints skillPoints={skillPoints} />
       <SkillTreeComponent skillData={firstSkill} />
 
     </div>

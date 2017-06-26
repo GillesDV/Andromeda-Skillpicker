@@ -4,7 +4,7 @@ export default class ClassLevelHeader extends Component{
   render(){
     return (
       <div>
-        Skill points: {this.props.amountOfSkillPoints}
+        Skill points: {this.props.skillPoints}
       </div>
     );
   }

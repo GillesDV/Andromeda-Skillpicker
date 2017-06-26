@@ -1,7 +1,8 @@
 
-export const setClassLevel = (classNumber) => ({
+export const setClassLevel = (classNumber, skillPoints) => ({
   type: 'SET_CLASS_LEVEL',
-  classNumber
+  classNumber,
+  skillPoints
 });
 
 export const setSkillPointsTotal = (skillPointsTotal) => ({

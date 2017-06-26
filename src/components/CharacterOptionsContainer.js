@@ -3,7 +3,8 @@ import CharacterOptionsPresentational from './CharacterOptionsPresentational';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    firstSkill: state.firstSkill
+    firstSkill: state.firstSkill,
+    skillPoints: state.SkillPointsTotal
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
