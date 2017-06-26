@@ -5,7 +5,7 @@ import initialState from './../data/state/initialState.js';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import ClassLevelHeader from './characterOptions/ClassLevelHeader';
-
+import ClassSkillPoints from './characterOptions/ClassSkillPoints';
 
 var state = initialState;
 
@@ -23,21 +23,47 @@ export default class App extends Component {
           <tbody>
             <tr>
               <td>
-                <ClassListComponent classList={characterList} />
+                <ClassListMenu />
               </td>
               <td>
-                <ClassLevelHeader />
-                <ClassSkillPoints amountOfSkillPoints={20}/>
-                <SkillTreeComponent skillData={this.firstSkill} />
+                <CharacterOptions firstSkill={this.firstSkill}/>
               </td>
               <td>
-                <HealthAndShields Health={250} Shields={300} />
-                <OverloadStats skillData={this.firstSkill} />
+                <CharacterData firstSkill={this.firstSkill}/>
               </td>
             </tr>
           </tbody>
         </table>
 
+      </div>
+    );
+  }
+}
+
+class ClassListMenu extends Component{
+  render(){
+    return (
+      <ClassListComponent classList={characterList} />
+    );
+  }
+}
+class CharacterOptions extends Component{
+  render(){
+    return (
+      <div>
+        <ClassLevelHeader />
+        <ClassSkillPoints />
+        <SkillTreeComponent skillData={this.props.firstSkill} />
+      </div>
+    );
+  }
+}
+class CharacterData extends Component{
+  render(){
+    return (
+      <div>
+        <HealthAndShields Health={250} Shields={300} />
+        <OverloadStats skillData={this.props.firstSkill} />
       </div>
     );
   }
@@ -120,16 +146,6 @@ class OverloadStats extends Component {
 
 
 
-
-class ClassSkillPoints extends Component{
-  render(){
-    return(
-      <div>
-        Skill points: {this.props.amountOfSkillPoints}
-      </div>
-    );
-  }
-}
 
 class HealthAndShields extends Component{
   render(){

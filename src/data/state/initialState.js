@@ -1,5 +1,7 @@
 let initialState = {
-  selectedClassLevel: 1
+  selectedClassLevel: 1,
+  SkillPointsTotal: 20
+  /*SkillPointsInUse: 0*/
 };
 
 /*let initialState = {
