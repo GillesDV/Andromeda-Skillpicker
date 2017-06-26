@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: () => {
-      dispatch(setClassLevel(ownProps.selectedLevel, ownProps.amountOfPoints))
+      dispatch(setClassLevel(ownProps.selectedLevel, ownProps.totalSkillPoints))
     }
   }
 }
