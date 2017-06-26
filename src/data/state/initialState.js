@@ -1,7 +1,19 @@
 let initialState = {
   selectedClassLevel: 1,
-  SkillPointsTotal: 20
+  SkillPointsTotal: 20,
   /*SkillPointsInUse: 0*/
+  firstSkill: {
+    title: 'Overload',
+    description: 'Tap Button: Unleashes an electrostatic discharge upon a target. High damage to shields and synthetic enemies. Detonates combo primers. Hold Button: Charges Overload, causing it to "chain" to two additional targets.',
+    InitialDamageUncharged: 150,
+    InitialDamageCharged: 200,
+    ChainDamage: 100,
+    AmountOfTargetsChainedWhenCharged: 2,
+    ShieldDamageBonusInPercent: 200,
+    SyntheticDamageBonusInPercent: 30,
+    RechargeTimeInSeconds: 15
+  }
+
 };
 
 /*let initialState = {

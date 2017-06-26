@@ -3,12 +3,12 @@ import React, {Component} from 'react'
 import ClassLevelHeader from './characterOptions/ClassLevelHeader';
 import ClassSkillPoints from './characterOptions/ClassSkillPoints';
 
-const CharacterOptionsPresentational = () => {
+const CharacterOptionsPresentational = ({firstSkill}) => {
   return (
     <div>
       <ClassLevelHeader />
       <ClassSkillPoints />
-      {/*      <SkillTreeComponent skillData={this.props.firstSkill} />*/}
+      <SkillTreeComponent skillData={firstSkill} />
 
     </div>
   )
@@ -18,14 +18,11 @@ export default CharacterOptionsPresentational;
 
 
 class SkillTreeComponent extends Component {
-  constructor(props){
-    super();
-  }
 
   render() {
     return (
       <div>
-        <h2>{this.props.skillData.dataObject.title} </h2>
+        <h2>{this.props.skillData.title} </h2>
 
         <table>
           <tbody>

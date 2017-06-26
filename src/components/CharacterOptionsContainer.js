@@ -2,7 +2,9 @@ import {connect} from 'react-redux';
 import CharacterOptionsPresentational from './CharacterOptionsPresentational';
 
 const mapStateToProps = (state, ownProps) => {
-  
+  return {
+    firstSkill: state.firstSkill
+  }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
