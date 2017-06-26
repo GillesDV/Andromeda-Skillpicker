@@ -4,10 +4,10 @@ import App from './components/AppStatic';
 import './index.css';
 import { Provider } from 'react-redux';
 import {createStore} from 'redux';
-import combinedReducers from './reducers/index';
+import allReducers from './reducers/index';
 import initialState from './data/state/initialState'
 
-const store = createStore(combinedReducers, initialState);
+const store = createStore(allReducers, initialState);
 
 ReactDOM.render(
   <Provider store={store}>

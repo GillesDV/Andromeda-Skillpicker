@@ -1,8 +1,10 @@
-import {combineReducers} from 'redux';
-import selectedClassLevel from './classLevel'
+const allReducers = (state, action) => {
+  switch (action.type) {
+    case 'SET_CLASS_LEVEL':
+      return {...state, selectedClassLevel: action.classNumber}
+    default:
+      return state
+  }
+}
 
-const allReducers = combineReducers({
-  selectedClassLevel
-})
-
-export default allReducers;
+export default allReducers

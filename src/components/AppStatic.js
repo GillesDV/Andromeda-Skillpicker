@@ -1,13 +1,7 @@
 import './../css/App.css';
 import React, { Component } from 'react';
 import logo from './../images/andromeda_initiative.png';
-import initialState from './../data/state/initialState.js';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import ClassLevelHeader from './characterOptions/ClassLevelHeader';
-import ClassSkillPoints from './characterOptions/ClassSkillPoints';
-
-var state = initialState;
+import CharacterOptions from './CharacterOptionsContainer';
 
 export default class App extends Component {
   constructor(){
@@ -15,7 +9,6 @@ export default class App extends Component {
     this.firstSkill = new OverloadSkill();
   }
   render() {
-    console.log(state);
 
     return (
       <div>
@@ -47,17 +40,7 @@ class ClassListMenu extends Component{
     );
   }
 }
-class CharacterOptions extends Component{
-  render(){
-    return (
-      <div>
-        <ClassLevelHeader />
-        <ClassSkillPoints />
-        <SkillTreeComponent skillData={this.props.firstSkill} />
-      </div>
-    );
-  }
-}
+
 class CharacterData extends Component{
   render(){
     return (
@@ -85,38 +68,7 @@ class OverloadSkill{
   }
 }
 
-class SkillTreeComponent extends Component {
-  constructor(props){
-    super();
-  }
 
-  render() {
-    return (
-      <div>
-        <h2>{this.props.skillData.dataObject.title} </h2>
-
-        <table>
-          <tbody>
-          <tr>
-            <td rowSpan="2" className="SkillTreeSlotInactive"> first </td>
-            <td rowSpan="2" className="SkillTreeSlotInactive"> second </td>
-            <td rowSpan="2" className="SkillTreeSlotInactive"> third </td>
-            <td className="SkillTreeSlotInactive"> four A </td>
-            <td className="SkillTreeSlotInactive"> four B </td>
-            <td className="SkillTreeSlotInactive"> Five A </td>
-          </tr>
-          <tr>
-            <td className="SkillTreeSlotInactive"> Five B </td>
-            <td className="SkillTreeSlotInactive"> Six A </td>
-            <td className="SkillTreeSlotInactive"> Six B </td>
-          </tr>
-          </tbody>
-        </table>
-
-      </div>
-    );
-  }
-}
 
 class OverloadStats extends Component {
   render(){
