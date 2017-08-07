@@ -3,3 +3,7 @@ export const setClassLevel = (classNumber, skillPoints) => ({
   classNumber,
   skillPoints
 });
+
+export const doOverloadStep2 = () => ({
+  type: 'DO_OVERLOAD_STEP_2'
+})

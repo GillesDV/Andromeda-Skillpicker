@@ -1,5 +1,7 @@
 import {connect} from 'react-redux';
 import CharacterOptionsPresentational from './CharacterOptionsPresentational';
+import {doOverloadStep2} from './../actions/Actions';
+
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,7 +11,9 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-
+    doOverloadStep2Func: () => {
+      dispatch(doOverloadStep2())
+    }
   }
 }
 

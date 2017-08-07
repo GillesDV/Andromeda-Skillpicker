@@ -1,6 +1,6 @@
 let initialState = {
   selectedClassLevel: 1,
-  SkillPointsTotal: 20,
+  SkillPointsTotal: 21,
   SkillPointsInUse: 10,
   firstSkill: {
     title: 'Overload',
@@ -15,6 +15,17 @@ let initialState = {
   }
 
 };
+
+/*
+  To solve the issue of skills in State:
+  Have an array of skills and indicators which are selected. 
+
+  allSkills: [ {Overload: {...}, ...}  ],
+  firstSkill: Overload: {
+    ...
+  }
+*/
+
 
 /*let initialState = {
   contentOfSearchbar: '',

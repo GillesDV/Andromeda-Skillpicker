@@ -1,13 +1,12 @@
 Use React-Router for the Detail view
 ^
 
-redux = data bijhouden.
-
 
 3 parts in the mainpage -> 3 subfolders in Components folder
 
 possibly remove -Component suffix
 
+Add a DropDown, near the search, allowing you to order it by: Name, class, base shield, base health, ...
 
 V1.0:
 Must be able to :
@@ -29,4 +28,14 @@ V1.2:
 
 V1.Never
 - Option to rate builds
--- Would require a back-end. More than just front-end. Outside scope.
+-- Would require a back-end. More than just front-end. Outside scope atm.
+
+---
+
+Separate branch, which incorporates TypeScript or Flow
+
+---
+
+Next todo:
+- link character data to State
+- implement the Undo button for Step 2
