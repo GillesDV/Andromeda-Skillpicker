@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class ClassLevelHeader extends Component{
+export default class ClassSkillPoints extends Component{
   render(){
     return (
       <div>
